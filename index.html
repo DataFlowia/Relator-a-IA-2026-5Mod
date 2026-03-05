@@ -541,7 +541,64 @@
   .compare-table tr:last-child td { border-bottom: none; }
   .compare-table tr:hover td { background: rgba(200,241,53,0.03); }
 
-  /* CIERRE MODULE */
+  /* HERO TITLE BANNER */
+  .hero-title-banner {
+    text-align: center;
+    padding: 5.5rem 2rem 3.5rem;
+    background: linear-gradient(180deg, rgba(10,10,15,0) 0%, rgba(10,10,15,0) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-title-banner::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(200,241,53,0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-title-banner .eyebrow {
+    justify-content: center; display: block;
+    margin-bottom: 1.2rem;
+  }
+  .hero-title-banner .hero-title-italic {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300; font-style: italic;
+    font-size: clamp(1.6rem, 5vw, 3rem);
+    color: rgba(245,240,232,0.7);
+    line-height: 1.2;
+    display: block;
+  }
+  .hero-title-banner .hero-title-main {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 900;
+    font-size: clamp(2.8rem, 8vw, 6.5rem);
+    line-height: 0.95;
+    color: var(--cream);
+    display: block;
+    margin-top: 0.2rem;
+  }
+  .hero-title-banner .hero-title-main em {
+    font-style: normal;
+    color: var(--acid);
+  }
+  .hero-title-banner .hero-subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    font-weight: 400; line-height: 1.7;
+    color: rgba(245,240,232,0.55);
+    max-width: 52ch; margin: 1.8rem auto 0;
+  }
+  .hero-divider-line {
+    width: 60px; height: 2px;
+    background: var(--acid);
+    margin: 2rem auto 0;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 700px) {
+    .hero-title-banner {
+      padding-top: 6rem;
+    }
+  }
   .cierre-hero {
     display: flex; flex-direction: column; align-items: center;
     justify-content: center; min-height: 70vh; text-align: center;
@@ -593,6 +650,15 @@
     <li><button onclick="showMobile('psique',this)"><span class="nav-num">05</span> Psique</button></li>
     <li><button onclick="showMobile('cierre',this)"><span class="nav-num">—</span> Cierre</button></li>
   </ul>
+</div>
+
+<!-- ════════════════ HERO TITLE ════════════════ -->
+<div class="hero-title-banner">
+  <span class="eyebrow">Relatoría Académica · Audiencia Chilena · 2026</span>
+  <span class="hero-title-italic">Inteligencia Artificial:</span>
+  <span class="hero-title-main">De los Orígenes<br>al <em>Futuro Humano</em></span>
+  <p class="hero-subtitle">Una relatoría académica en cinco módulos que explora la historia, impacto y desafíos de la inteligencia artificial en el contexto chileno.</p>
+  <div class="hero-divider-line"></div>
 </div>
 
 <!-- ════════════════ MÓDULO 1: GÉNESIS ════════════════ -->
